@@ -1,1 +1,51 @@
-<p>custom-form works!</p>
+<form [formGroup]="medicalForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput formControlName="nameInput" placeholder="First Name" />
+  </mat-form-field>
+
+  <mat-button-toggle-group
+      id="ageSelection"
+      #group="matButtonToggleGroup"
+      formControlName="ageGroupInput"
+    >
+      <mat-button-toggle value="1" aria-label="Text align left">
+        <span>1-12</span>
+      </mat-button-toggle>
+      <mat-button-toggle value="13" aria-label="Text align center">
+        <span>13-18</span>
+      </mat-button-toggle>
+      <mat-button-toggle value="19" aria-label="Text align center">
+        <span>19-25</span>
+      </mat-button-toggle>
+      <mat-button-toggle value="26" aria-label="Text align center">
+        <span>26-35</span>
+      </mat-button-toggle>
+      <mat-button-toggle value="36" aria-label="Text align center">
+        <span>36+</span>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+
+  <mat-button-toggle-group
+    id="originSelection"
+    #group="matButtonToggleGroup"
+    multiple
+    formControlName="raceInput"
+  >
+    <mat-button-toggle value="white" aria-label="Text align left">
+      <span>White</span>
+    </mat-button-toggle>
+    <mat-button-toggle value="black" aria-label="Text align center">
+      <span>Black</span>
+    </mat-button-toggle>
+    <mat-button-toggle value="native" aria-label="Text align center">
+      <span>Native American</span>
+    </mat-button-toggle>
+    <mat-button-toggle value="hispanic" aria-label="Text align center">
+      <span>Hispanic</span>
+    </mat-button-toggle>
+    <mat-button-toggle value="other" aria-label="Text align center">
+      <span>Other</span>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+    <button mat-button>Submit</button>
+</form>
