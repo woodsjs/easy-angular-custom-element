@@ -7,13 +7,13 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AppComponent } from './app.component';
+// import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomFormComponent } from './custom-form/custom-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    // AppComponent,
     CustomFormComponent
   ],
   imports: [
@@ -26,7 +26,7 @@ import { CustomFormComponent } from './custom-form/custom-form.component';
     MatButtonToggleModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  // bootstrap: [AppComponent],
   entryComponents: [ CustomFormComponent ]
 })
 export class AppModule {
